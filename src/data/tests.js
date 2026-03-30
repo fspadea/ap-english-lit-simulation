@@ -860,6 +860,237 @@ Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feed
       },
     ],
   },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // OFFICIAL 2024 — SET 1 (FRQ only)
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id: "official2024s1",
+    label: "2024 AP Exam - Set 1",
+    year: "2024",
+    badge: "Official",
+    badgeColor: "#FF4757",
+    badgeBg: "rgba(255,71,87,0.15)",
+    badgeBorder: "rgba(255,71,87,0.3)",
+    description: "Official 2024 AP English Literature FRQ Set 1 — Poetry Analysis + Prose Fiction Analysis + Literary Argument.",
+    totalTime: 120 * 60,
+
+    questions: [
+      // ── FRQ 1: Poetry Analysis — Ridge "To a Star Seen at Twilight" ──
+      {
+        num: 1,
+        type: "poetry-analysis",
+        title: "Poetry Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "John Rollin Ridge",
+        source: "\"To a Star Seen at Twilight\" (1868)",
+        context: "In John Rollin Ridge\u2019s poem \u201cTo a Star Seen at Twilight,\u201d published in 1868, the speaker admires a solitary star shining at twilight and considers its significance. Read the poem carefully.",
+        prompt: "In a well-written essay, analyze how Ridge uses literary elements and techniques to convey the speaker\u2019s complex reflection on the star.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "To a Star Seen at Twilight" },
+          { lineStart: "", text: "" },
+          { lineStart: 1, text: "Hail solitary star!" },
+          { lineStart: 2, text: "That shinest from thy far blue height," },
+          { lineStart: 3, text: "And overlookest Earth" },
+          { lineStart: 4, text: "And Heaven, companionless in light!" },
+          { lineStart: 5, text: "The rays around thy brow" },
+          { lineStart: 6, text: "Are an eternal wreath for thee;" },
+          { lineStart: 7, text: "Yet thou\u2019rt not proud, like man," },
+          { lineStart: 8, text: "Though thy broad mirror is the sea," },
+          { lineStart: 9, text: "And thy calm home eternity!" },
+          { lineStart: "", text: "" },
+          { lineStart: 10, text: "Shine on, night-bosomed star!" },
+          { lineStart: 11, text: "And through its realms thy soul\u2019s eye dart," },
+          { lineStart: 12, text: "And count each age of light," },
+          { lineStart: 13, text: "For their eternal wheel thou art." },
+          { lineStart: "", text: "" },
+          { lineStart: 14, text: "Thou dost roll into the past days," },
+          { lineStart: 15, text: "Years, and ages too," },
+          { lineStart: 16, text: "And naught thy giant progress stays." },
+          { lineStart: "", text: "" },
+          { lineStart: 17, text: "I love to gaze upon" },
+          { lineStart: 18, text: "Thy speaking face, thy calm, fair brow," },
+          { lineStart: 19, text: "And feel my spirit dark" },
+          { lineStart: 20, text: "And deep, grow bright and pure as thou." },
+          { lineStart: 21, text: "Like thee it stands alone;" },
+          { lineStart: 22, text: "Like thee its native home is night," },
+          { lineStart: 23, text: "But there the likeness ends,\u2014" },
+          { lineStart: 24, text: "It beams not with thy steady light." },
+          { lineStart: 25, text: "Its upward path is high," },
+          { lineStart: 26, text: "But not so high as thine\u2014thou\u2019rt far" },
+          { lineStart: 27, text: "Above the reach of clouds," },
+          { lineStart: 28, text: "Of storms, of wreck, oh lofty star!" },
+          { lineStart: 29, text: "I would all men might look" },
+          { lineStart: 30, text: "Upon thy pure sublimity," },
+          { lineStart: 31, text: "And in their bosoms drink" },
+          { lineStart: 32, text: "Thy lovliness and light like me;" },
+          { lineStart: 33, text: "For who in all the world" },
+          { lineStart: 34, text: "Could gaze upon thee thus, and feel" },
+          { lineStart: 35, text: "Aught in his nature base," },
+          { lineStart: 36, text: "Or mean, or low, around him steal!" },
+          { lineStart: "", text: "" },
+          { lineStart: 37, text: "Shine on companionless" },
+          { lineStart: 38, text: "As now thou seem\u2019st. Thou art the throne" },
+          { lineStart: 39, text: "Of thy own spirit, star!" },
+          { lineStart: 40, text: "And mighty things must be alone." },
+          { lineStart: 41, text: "Alone the ocean heaves," },
+          { lineStart: 42, text: "Or calms his bosom into sleep;" },
+          { lineStart: 43, text: "Alone each mountain stands" },
+          { lineStart: 44, text: "Upon its basis broad and deep;" },
+          { lineStart: 45, text: "Alone through heaven the comets sweep," },
+          { lineStart: 46, text: "Those burning worlds which God has thrown" },
+          { lineStart: 47, text: "Upon the universe in wrath," },
+          { lineStart: 48, text: "As if he hated them\u2014their path" },
+          { lineStart: 49, text: "No stars, no suns may follow, none\u2014" },
+          { lineStart: 50, text: "\u2019Tis great, \u2019tis great to be alone!" },
+        ],
+        footnotes: [],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the poem." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Poetry Analysis essay (FRQ 1).
+The student analyzed John Rollin Ridge's "To a Star Seen at Twilight" (1868) — a poem in which the speaker addresses a solitary star, admiring its constancy and purity, comparing it to his own spirit, and ultimately celebrating the grandeur of solitude.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of literary elements: apostrophe (addressing the star), imagery (light, sea, mountains, comets), tone (reverent, aspirational), structure (movement from admiration to self-comparison to universal assertion), diction, figurative language, and how they convey the speaker's complex reflection — admiration for the star's solitary greatness, self-awareness of his own limitations, and a philosophical embrace of noble solitude.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 2: Prose Fiction Analysis — Gallant "One Morning in June" ──
+      {
+        num: 2,
+        type: "prose-analysis",
+        title: "Prose Fiction Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Mavis Gallant",
+        source: "\"One Morning in June\" (1952)",
+        context: "The following excerpt is from Mavis Gallant\u2019s short story \u201cOne Morning in June,\u201d published in 1952. In this passage, Mike Cahill is in France for one year to explore his talent for art. Read the passage carefully.",
+        prompt: "In a well-written essay, analyze how Gallant uses literary elements and techniques to convey Mike\u2019s complex experience of studying painting.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: 1, text: "    He had come to France because the words \u201cart\u201d" },
+          { lineStart: 2, text: "and \u201cParis\u201d were unbreakably joined in his family\u2019s" },
+          { lineStart: 3, text: "imagination, the legend of Trilby\u2019s Bohemia\u00B9" },
+          { lineStart: 4, text: "persisting long after the truth of it had died. When his" },
+          { lineStart: 5, text: "high school art teacher, a young woman whose" },
+          { lineStart: 6, text: "mobiles\u00B2 had been praised, pronounced that his was a" },
+          { lineStart: 7, text: "talent not to be buried under the study of medicine or" },
+          { lineStart: 8, text: "law, his family had decided that a year in Paris would" },
+          { lineStart: 9, text: "show whether or not his natural bent was toward" },
+          { lineStart: 10, text: "painting. It was rather like exposing someone to a" },
+          { lineStart: 11, text: "case of measles and watching for spots to break out." },
+          { lineStart: 12, text: "    In Paris, Mike had spent the first three weeks" },
+          { lineStart: 13, text: "standing in the wrong queue at the Beaux-Arts,\u00B3 and" },
+          { lineStart: 14, text: "when no one seemed able to direct him to the right" },
+          { lineStart: 15, text: "one, he had given up the Beaux-Arts entirely and" },
+          { lineStart: 16, text: "joined a class instructed by an English painter called" },
+          { lineStart: 17, text: "Chitterley, whose poster advertisement he had seen in" },
+          { lineStart: 18, text: "a caf\u00e9. It was Mr. Chitterley\u2019s custom to turn his" },
+          { lineStart: 19, text: "young charges loose on the city and then, once a week" },
+          { lineStart: 20, text: "or so, comment on their work in a borrowed studio on" },
+          { lineStart: 21, text: "the Quai d\u2019Anjou.\u2074 Mike painted with sober patience" },
+          { lineStart: 22, text: "the bridges of the Seine, the rain-soaked lawns of the" },
+          { lineStart: 23, text: "Tuileries, and a head-on view of Notre Dame. His" },
+          { lineStart: 24, text: "paintings were large (Mr. Chitterley was nearsighted)," },
+          { lineStart: 25, text: "askew (as he had been taught in the public schools of" },
+          { lineStart: 26, text: "New York), and empty of people (he had never been" },
+          { lineStart: 27, text: "taught to draw, and it was not his nature to take" },
+          { lineStart: 28, text: "chances)." },
+          { lineStart: 29, text: "    \u201cVery interesting,\u201d said Mr. Chitterley of Mike\u2019s" },
+          { lineStart: 30, text: "work. Squinting a little, he would add, \u201cAh! I see what" },
+          { lineStart: 31, text: "you were trying to do here!\u201d" },
+          { lineStart: 32, text: "    \u201cYou do?\u201d Mike wished he would be more specific," },
+          { lineStart: 33, text: "for he sometimes recognized that his pictures were" },
+          { lineStart: 34, text: "flat, empty, and the color of cement. At first, he had" },
+          { lineStart: 35, text: "blamed the season, for the Paris winter had been" },
+          { lineStart: 36, text: "sunless; later on, he saw that its gray contained every" },
+          { lineStart: 37, text: "shade in a beam of light, but this effect he was unable" },
+          { lineStart: 38, text: "to reproduce. Unnerved by the pressure of time, he" },
+          { lineStart: 39, text: "watched his work all winter, searching for the clue" },
+          { lineStart: 40, text: "that would set him on a course. Prodded in the" },
+          { lineStart: 41, text: "direction of art, he now believed in it, enjoying, above" },
+          { lineStart: 42, text: "all, the solitude, the sense of separateness, the" },
+          { lineStart: 43, text: "assembling of parts into something reasonable. He" },
+          { lineStart: 44, text: "might have been equally happy at a quiet table," },
+          { lineStart: 45, text: "gathering into something ticking and ordered the" },
+          { lineStart: 46, text: "scattered wheels of a watch, and he had most certainly" },
+          { lineStart: 47, text: "never given it a thought. At last, when the season had" },
+          { lineStart: 48, text: "rained itself to an end (and his family innocently were" },
+          { lineStart: 49, text: "prepared to have him exhibit his winter\u2019s harvest in" },
+          { lineStart: 50, text: "some garret\u2075 of the Left Bank and send home the" },
+          { lineStart: 51, text: "critics\u2019 clippings), he approached Mr. Chitterley and" },
+          { lineStart: 52, text: "asked what he ought to do next." },
+          { lineStart: 53, text: "    \u201cWhy, go to the country,\u201d said Mr. Chitterley, who" },
+          { lineStart: 54, text: "was packing for a holiday with the owner of the Quai" },
+          { lineStart: 55, text: "d\u2019Anjou studio. \u201cGo south. Don\u2019t stop in a hotel but" },
+          { lineStart: 56, text: "live on the land, in a tent, and paint, paint, paint," },
+          { lineStart: 57, text: "paint!\u201d" },
+          { lineStart: 58, text: "    \u201cI can\u2019t afford it,\u201d Mike said. \u201cI mean I can\u2019t afford" },
+          { lineStart: 59, text: "to buy the tent and stuff. But I can stay over here until" },
+          { lineStart: 60, text: "August, if you think there\u2019s any point. I mean is it" },
+          { lineStart: 61, text: "wasting time for me to paint, paint, paint?\u201d" },
+          { lineStart: 62, text: "    Mr. Chitterley shot him an offended look and then" },
+          { lineStart: 63, text: "a scornful one, which said, How like an American!" },
+          { lineStart: 64, text: "The only measuring rods, time and money. Aloud, he" },
+          { lineStart: 65, text: "suggested Menton.\u2076 He had stayed there as a child," },
+          { lineStart: 66, text: "and he remembered it as a paradise of lemon ice and" },
+          { lineStart: 67, text: "sunshine. Mike, for want of a better thought, or even a" },
+          { lineStart: 68, text: "contrastive one, took the train there a day later." },
+        ],
+        footnotes: [
+          "1 Trilby, a popular 1894 novel by George du Maurier, focuses on the unconventional lifestyles of artists and musicians in 1850s Paris.",
+          "2 suspended decorative sculptures designed to move with air currents",
+          "3 a famous art school in Paris",
+          "4 a neighborhood on the \u00cele Saint-Louis, an island in the Seine river in Paris",
+          "5 a small, dismal attic room",
+          "6 a town on the French Riviera",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the passage." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Prose Fiction Analysis essay (FRQ 2).
+The student analyzed an excerpt from Mavis Gallant's "One Morning in June" (1952) — a passage about Mike Cahill, a young American in Paris trying to develop his talent for painting under the guidance of Mr. Chitterley, navigating his family's romantic expectations versus the reality of his uncertain artistic abilities.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of narrative techniques: ironic tone, characterization (Mike's passivity and self-doubt, Chitterley's vagueness), imagery (flat cement-colored paintings, gray Paris winter), diction, humor (measles simile, nearsighted teacher), narrative distance, and how they convey Mike's complex experience — caught between family expectations, romantic notions of art, his own mediocrity, and a dawning appreciation for solitude and process over product.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 3: Literary Argument — A Character's Indecision ──
+      {
+        num: 3,
+        type: "literary-argument",
+        title: "Literary Argument",
+        points: 6,
+        suggestedTime: 40,
+        prompt: `Many works of literature feature a character who may be reluctant to make a decision, unable to make a decision, or is resistant to doing so. This indecision can have broader implications for that character or other characters. Such implications may include changes to a character\u2019s relationships, social and/or financial stability, well-being, or any other aspects of the character\u2019s existence.
+
+Either from your own reading or from the list below, choose a work of fiction in which a character delays or avoids making a decision. Then, in a well-written essay, analyze how the impact of this indecision contributes to an interpretation of the work as a whole. Do not merely summarize the plot.
+
+In your response you should do the following:
+\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.
+\u2022 Provide evidence to support your line of reasoning.
+\u2022 Explain how the evidence supports your line of reasoning.
+\u2022 Use appropriate grammar and punctuation in communicating your argument.
+
+Suggested works:
+The Age of Innocence, An American Marriage, Anna Karenina, The Autobiography of Miss Jane Pittman, Beloved, Colorless Tsukuru Tazaki and His Years of Pilgrimage, Corelli\u2019s Mandolin, Dubliners, Emma, Frankenstein, George Washington G\u00f3mez, Indian Horse, Interior Chinatown, Jane Eyre, The Kite Runner, Little Fires Everywhere, A Long Petal of the Sea, Love in the Time of Cholera, Madame Bovary, The Metamorphosis, The Miraculous Day of Amalia G\u00f3mez, The Namesake, The Night Watchman, North and South, One Flew Over the Cuckoo\u2019s Nest, Pipeline, The Professor\u2019s House, Quicksand, A Raisin in the Sun, Rebecca, A Room with a View, The Stranger, A Tale of Two Cities, Tess of the d\u2019Urbervilles, Topdog/Underdog, Waiting, Whereabouts, Wuthering Heights`,
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the selected work." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning; 4 = specific evidence supporting all claims, consistently explains how details contribute to interpretation of the work as a whole." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Literary Argument essay (FRQ 3).
+The student chose their own literary work to respond to a prompt about a character who delays or avoids making a decision, and how that indecision has broader implications and contributes to an interpretation of the work as a whole.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+The student must demonstrate genuine knowledge of their chosen work, not just plot summary. Look for a clear interpretive claim about how the character's indecision contributes to the meaning of the work as a whole, supported by specific textual evidence with insightful commentary.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+    ],
+  },
 ];
 
 export default ALL_TESTS;
