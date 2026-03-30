@@ -660,6 +660,206 @@ Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feed
       },
     ],
   },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // OFFICIAL 2025 — SET 2 (FRQ only)
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id: "official2025s2",
+    label: "2025 AP Exam - Set 2",
+    year: "2025",
+    badge: "Official",
+    badgeColor: "#FF4757",
+    badgeBg: "rgba(255,71,87,0.15)",
+    badgeBorder: "rgba(255,71,87,0.3)",
+    description: "Official 2025 AP English Literature FRQ Set 2 — Poetry Analysis + Prose Fiction Analysis + Literary Argument.",
+    totalTime: 120 * 60,
+
+    questions: [
+      // ── FRQ 1: Poetry Analysis — Hern\u00e1ndez Cruz "Two Guitars" ──
+      {
+        num: 1,
+        type: "poetry-analysis",
+        title: "Poetry Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Victor Hern\u00e1ndez Cruz",
+        source: "\"Two Guitars\" from Maraca: New and Selected Poems, 1965\u20132000 (2001)",
+        context: "In Victor Hern\u00e1ndez Cruz\u2019s poem \u201cTwo Guitars,\u201d published in 2001, the speaker imagines that two guitars are alive and engaging in conversation about their musical experiences. Read the poem carefully.",
+        prompt: "In a well-written essay, analyze how Hern\u00e1ndez Cruz uses literary elements and techniques to convey a complex portrayal of the guitars\u2019 musical world.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "Two Guitars" },
+          { lineStart: "", text: "" },
+          { lineStart: 1, text: "Two guitars were left in a room all alone" },
+          { lineStart: 2, text: "They sat on different corners of the parlor" },
+          { lineStart: 3, text: "In this solitude they started talking to each other" },
+          { lineStart: 4, text: "My strings are tight and full of tears" },
+          { lineStart: 5, text: "The man who plays me has no heart" },
+          { lineStart: 6, text: "I have seen it leave out of his mouth" },
+          { lineStart: 7, text: "I have seen it melt out of his eyes" },
+          { lineStart: 8, text: "It dives into the pores of the earth" },
+          { lineStart: 9, text: "When they squeeze me tight I bring" },
+          { lineStart: 10, text: "Down the angels who live off the chorus" },
+          { lineStart: 11, text: "The trios singing loosen organs" },
+          { lineStart: 12, text: "With melodious screwdrivers" },
+          { lineStart: 13, text: "Sentiment comes off the hinges" },
+          { lineStart: 14, text: "Because a song is a mountain put into" },
+          { lineStart: 15, text: "Words and landscape is the feeling that" },
+          { lineStart: 16, text: "Enters something so big in the harmony" },
+          { lineStart: 17, text: "We are always in danger of blowing up" },
+          { lineStart: 18, text: "With passion" },
+          { lineStart: "", text: "" },
+          { lineStart: 19, text: "The other guitar:" },
+          { lineStart: 20, text: "In 1944 New York" },
+          { lineStart: 21, text: "When the Trio Los Panchos\u00B9 started" },
+          { lineStart: 22, text: "With Mexican & Puerto Rican birds\u00B2" },
+          { lineStart: 23, text: "I am the one that one of them held" },
+          { lineStart: 24, text: "Tight  like a woman" },
+          { lineStart: 25, text: "Their throats gardenia\u00B3 gardens" },
+          { lineStart: 26, text: "An airport for dreams" },
+          { lineStart: 27, text: "I\u2019ve been in theaters and cabarets" },
+          { lineStart: 28, text: "I played in an apartment on 102nd street" },
+          { lineStart: 29, text: "After a baptism pregnant with women" },
+          { lineStart: 30, text: "The men flirted and were offered" },
+          { lineStart: 31, text: "Chicken soup" },
+          { lineStart: 32, text: "Echoes came out of hallways as if from caves" },
+          { lineStart: 33, text: "Someone is opening the door now" },
+          { lineStart: 34, text: "The two guitars hushed and there was a" },
+          { lineStart: 35, text: "Resonance in the air like what is left by" },
+          { lineStart: 36, text: "The last chord of a bolero.\u2074" },
+        ],
+        footnotes: [
+          "1 a musical group that specializes in boleros and other romantic ballads",
+          "2 guitars",
+          "3 a type of plant known for its striking flowers",
+          "4 a genre of romantic music that originated in Cuba and has been popular throughout the Americas; common themes include unrequited love, betrayal, and abandonment",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the poem. The thesis must provide a defensible interpretation of the complex portrayal of the guitars' musical world." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations, may make one good point; 3 = specific evidence supporting claims in a line of reasoning, explains how at least one literary element contributes to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by: (1) identifying and exploring complexities or tensions within the poem, (2) situating the interpretation within a broader context, (3) accounting for alternative interpretations, or (4) employing a consistently vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Poetry Analysis essay (FRQ 1).
+The student analyzed Victor Hern\u00e1ndez Cruz's "Two Guitars" — a poem in which two guitars converse about their musical experiences, blending personification with cultural imagery of Latin music.
+Evaluate using the official AP Lit 2025 rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of literary elements: personification (guitars as speakers), imagery (tears, angels, passion, gardenia gardens), structure (two voices/perspectives), diction, figurative language (song as mountain, throats as gardens), cultural context (bolero, Trio Los Panchos), and how they convey a complex portrayal of the guitars' musical world — the emotional power of music, its cultural roots, and its transcendent quality.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 2: Prose Fiction Analysis — Haien, The All of It ──
+      {
+        num: 2,
+        type: "prose-analysis",
+        title: "Prose Fiction Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Jeannette Haien",
+        source: "The All of It (1986)",
+        context: "The following excerpt is from Jeannette Haien\u2019s novel The All of It, published in 1986. In this passage, Father Declan, an Irish priest, is driving home after a successful fishing trip. Read the passage carefully.",
+        prompt: "In a well-written essay, analyze how Haien uses literary elements and techniques to develop a complex portrayal of Father Declan.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "Par." },
+          { lineStart: 1, text: "    Nothing exaggerates a sense of lonely solitude so much as a long night drive through" },
+          { lineStart: "", text: "thrashing rain and dense, culprit fog." },
+          { lineStart: "", text: "" },
+          { lineStart: 2, text: "    Crouched over the steering-wheel of the old Ford, his head thrust forward, turtle-like, out of" },
+          { lineStart: "", text: "his collar, the only sound the sidelong loping strokes of the windshield wipers, he peered ahead" },
+          { lineStart: "", text: "through the car lights\u2019 gauzy beam at the narrow, winding road which kept vanishing and" },
+          { lineStart: "", text: "reappearing like a dark ribbon in a magician\u2019s hand, seen now, now not, depending on the shift" },
+          { lineStart: "", text: "of the fog.\u2026" },
+          { lineStart: "", text: "" },
+          { lineStart: 3, text: "    It was terrible the way his splendid excitement had vanished almost the instant he\u2019d left" },
+          { lineStart: "", text: "the Castle and started the homeward journey, the lilt and thrill of his great adventure draining" },
+          { lineStart: "", text: "from him suddenly, to be as suddenly replaced by a violent flush of self-pity caused (admit it)" },
+          { lineStart: "", text: "by the sorrowful fact that at the end of the long night drive there would be nought for him but" },
+          { lineStart: "", text: "the bulk emptiness of the bleak parish-house, its outside walls bleeding with damp, its windows" },
+          { lineStart: "", text: "dark, its high, cold rooms devoid of life except as he would enter them only to encounter, going" },
+          { lineStart: "", text: "before him in the chilly chambers, the exhaled, ghostly haze of his own breath; that\u2026deadliness," },
+          { lineStart: "", text: "juxtaposed to the powerful vividness of its imagined opposite: anticipation\u2014of a lit window, of" },
+          { lineStart: "", text: "a waiting presence, of a voice asking those simple, linking, engaging questions which absence" },
+          { lineStart: "", text: "inspires: \u201cHow are you?\u201d \u201cHow did you fare?\u201d \u201cWhat was it like?\u201d" },
+          { lineStart: "", text: "" },
+          { lineStart: 4, text: "    Oh, the blanknesses of solitude\u2026." },
+          { lineStart: "", text: "" },
+          { lineStart: 5, text: "    He ought to get a dog, a lively, sensitive puppy he could rear to companionable habits; one" },
+          { lineStart: "", text: "that would accompany him on walks and ride beside him in the car, that would sleep next to his" },
+          { lineStart: "", text: "bed and wag him awake of a morning, a warm, affectionate, entertaining little dog. He pictured" },
+          { lineStart: "", text: "the creature: a smallish terrier, a brindled,\u00B9 charming cairn or smoothcoated brown-and-white" },
+          { lineStart: "", text: "Jack Russell,\u00B2 all spiff and prance and independence but ready ever for a petting. \u201cFather" },
+          { lineStart: "", text: "Declan\u2019s little dog,\u201d mothers would say of it in a recommending way, meaning it wouldn\u2019t snap" },
+          { lineStart: "", text: "when their children stooped to pat it. \u201c\u2019Tis Father Declan\u2019s\u201d: assurance that it wouldn\u2019t forget" },
+          { lineStart: "", text: "itself and spot the carpet\u2026. Was there anything written against a priest having a dog? For sure" },
+          { lineStart: "", text: "the Bishop didn\u2019t have one. Could he think of a sixtyish priest he knew who did? He couldn\u2019t;" },
+          { lineStart: "", text: "though Father Patrick Joyce in Galway kept a toothless, stiff, off-putting thing of a cat, a feature" },
+          { lineStart: "", text: "of parish-house life you\u2019d be less surprised by in Galway than in Roonatellin, priests in Galway" },
+          { lineStart: "", text: "being laws unto themselves\u2026. And of course, there was the obstacle of Mrs. Duggin, who \u201cdid\u201d" },
+          { lineStart: "", text: "for him as hasty morning-cleaner and washer and (hastier) cook. (He\u2019d try again hinting to her" },
+          { lineStart: "", text: "how much he\u2019d appreciate a bit of noontime meat or fish not fried to the consistency of cement," },
+          { lineStart: "", text: "or a veg not boiled to a rag\u2019s limpness.) Mrs. Duggin wouldn\u2019t take to a dog\u2026. He could hear" },
+          { lineStart: "", text: "her: \u201cI\u2019m hoovering\u00B3 hairs, Father, dog hairs,\u201d tousling the thin of her own, her mouth dropped" },
+          { lineStart: "", text: "disapprovingly. \u201cIt\u2019s not that I\u2019m complaining of the work, the amount of it, but dog hairs\u2014\u201d" },
+          { lineStart: "", text: "" },
+          { lineStart: 6, text: "    But must he forever give in to the Mrs. Duggins of the world? forever keep sublimating" },
+          { lineStart: "", text: "wishes? as he was this instant sublimating (burying, or trying to) the wish (he struck the word" },
+          { lineStart: "", text: "desire) to share with someone this singular-in-his-life, brilliantly prodigious, gallimaufry\u2074" },
+          { lineStart: "", text: "twenty-four-pound-ten-ounce day, the bodily fact of it residing in the car\u2019s boot,\u2075 causing now" },
+          { lineStart: "", text: "that worrisome, unhealthy, grinding sound the engine was making (or so, in his angler\u2019s\u2076 pride," },
+          { lineStart: "", text: "he fancied the source of the noise to be)\u2026." },
+          { lineStart: "", text: "" },
+          { lineStart: 7, text: "    Innocent, the mere wishing of a mere wish." },
+        ],
+        footnotes: [
+          "1 brownish or tawny, with streaks of color",
+          "2 Cairn and Jack Russell are both breeds of terrier.",
+          "3 vacuuming",
+          "4 chaotic",
+          "5 trunk",
+          "6 fisher\u2019s",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the passage. The thesis must provide a defensible interpretation of the complex portrayal of Father Declan." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations, may make one good point; 3 = specific evidence supporting claims in a line of reasoning, explains how at least one literary element contributes to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by: (1) identifying and exploring complexities or tensions within the passage, (2) situating the interpretation within a broader context, (3) accounting for alternative interpretations, or (4) employing a consistently vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Prose Fiction Analysis essay (FRQ 2).
+The student analyzed an excerpt from Jeannette Haien's The All of It (1986) — a passage about Father Declan, an Irish priest driving home alone after a fishing trip, reflecting on his solitude and longing for companionship.
+Evaluate using the official AP Lit 2025 rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of narrative techniques: imagery (fog, bleak parish-house, imagined dog), tone (loneliness, self-pity, wry humor), diction, stream-of-consciousness style, characterization (his fantasies about a dog, his awareness of constraints like Mrs. Duggin and the Bishop), figurative language (road as dark ribbon, sublimating wishes), and how they develop a complex portrayal of Father Declan — his deep loneliness, suppressed desires, humor, and tension between priestly duty and human need for connection.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 3: Literary Argument — A Character's Secret ──
+      {
+        num: 3,
+        type: "literary-argument",
+        title: "Literary Argument",
+        points: 6,
+        suggestedTime: 40,
+        prompt: `Many works of literature feature a character who holds a secret that can have broader implications for that character or other characters. For example, such secrets may create conflict, provide a source of consolation, protect characters from reality, or allow one character to manipulate other characters.
+
+Either from your own reading or from the list below, choose a work of fiction in which an important character holds a secret that affects that character\u2019s relationship with one or more other characters. Then, in a well-written essay, analyze how the effect of the character\u2019s secret contributes to an interpretation of the work as a whole. Do not merely summarize the plot.
+
+In your response you should do the following:
+\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.
+\u2022 Provide evidence to support your line of reasoning.
+\u2022 Explain how the evidence supports your line of reasoning.
+\u2022 Use appropriate grammar and punctuation in communicating your argument.
+
+Suggested works:
+American Spy, Angels in America, Another Country, As I Lay Dying, Atonement, The Awakening, Behold the Dreamers, The Color Purple, A Doll\u2019s House, East of Eden, The English Patient, Fabulation, or the Re-Education of Undine, Frankenstein, Great Expectations, The Great Gatsby, Homegoing, Jane Eyre, The Joy Luck Club, The Kite Runner, Like Water for Chocolate, Little Fires Everywhere, Macbeth, The Memory Keeper\u2019s Daughter, The Namesake, Passing, People of the Whale, The Picture of Dorian Gray, Pride and Prejudice, Rebecca, The Remains of the Day, The Scarlet Letter, Song of Solomon, The Sound of a Voice, Sula, Twelfth Night, Washington Black, The Women of Brewster Place`,
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the selected work. The thesis must provide a defensible interpretation of how a character's secret affects relationships and contributes to the meaning of the work as a whole." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, tends to focus on overarching narrative or description rather than specific details; 2 = some specific evidence with broad generalizations, may make one good point; 3 = specific evidence supporting claims in a line of reasoning, focuses on importance of specific details from selected work; 4 = specific evidence supporting all claims, consistently explains how specific details contribute to interpretation of the work as a whole." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by: (1) identifying and exploring complexities or tensions within the selected work, (2) situating the interpretation within a broader context, (3) accounting for alternative interpretations, or (4) employing a consistently vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Literary Argument essay (FRQ 3).
+The student chose their own literary work to respond to a prompt about a character who holds a secret that affects relationships with other characters — secrets may create conflict, provide consolation, protect from reality, or allow manipulation.
+Evaluate using the official AP Lit 2025 rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+The student must demonstrate genuine knowledge of their chosen work, not just plot summary. Look for a clear interpretive claim about how the effect of the character's secret contributes to an interpretation of the work as a whole, supported by specific textual evidence with insightful commentary.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+    ],
+  },
 ];
 
 export default ALL_TESTS;
