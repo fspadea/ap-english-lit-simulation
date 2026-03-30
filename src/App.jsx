@@ -1248,20 +1248,74 @@ Return JSON: {"score": integer 0-${q.points}, "feedback": "..."}`;
                 </div>
                 <span style={{fontSize:14,fontWeight:800,color:C.b}}>{mcCorrect}/{mcTotal}</span>
               </div>
-              <div style={{display:"grid",gridTemplateColumns:mob?"1fr":"1fr 1fr",gap:8}}>
+              <div style={{display:"flex",flexDirection:"column",gap:10}}>
                 {test.mcQuestions.map(mq => {
                   const chosen = mcAnswers[mq.num];
                   const isCorrect = chosen === mq.answer;
-                  const bg = isCorrect ? "rgba(0,245,160,0.06)" : !chosen ? "rgba(255,255,255,0.02)" : "rgba(255,71,87,0.06)";
-                  const border = isCorrect ? "rgba(0,245,160,0.2)" : !chosen ? C.border : "rgba(255,71,87,0.2)";
+                  const unanswered = !chosen;
+                  const headerBg = isCorrect ? "rgba(0,245,160,0.08)" : unanswered ? "rgba(255,255,255,0.03)" : "rgba(255,71,87,0.08)";
+                  const headerBorder = isCorrect ? "rgba(0,245,160,0.25)" : unanswered ? C.border : "rgba(255,71,87,0.25)";
+                  const statusColor = isCorrect ? C.g : unanswered ? C.muted : C.r;
+                  const statusLabel = isCorrect ? "✓ Correct" : unanswered ? "– Not answered" : "✗ Incorrect";
+                  const isOpen = expanded[`mc-${mq.num}`];
                   return (
-                    <div key={mq.num} style={{background:bg,border:`1px solid ${border}`,
-                      borderRadius:8,padding:"8px 12px",fontSize:12,display:"flex",alignItems:"center",gap:10}}>
-                      <span style={{fontWeight:800,color:isCorrect?C.g:!chosen?C.muted:C.r,width:28}}>{mq.num}</span>
-                      <span style={{color:C.muted,flex:1,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{mq.stem.slice(0,60)}{mq.stem.length>60?"...":""}</span>
-                      <span style={{fontWeight:700,color:isCorrect?C.g:C.r,flexShrink:0}}>
-                        {chosen ? (isCorrect ? "\u2713" : `${chosen} \u2192 ${mq.answer}`) : `\u2013 ${mq.answer}`}
-                      </span>
+                    <div key={mq.num} style={{border:`1px solid ${headerBorder}`,borderRadius:10,overflow:"hidden"}}>
+                      {/* Clickable header */}
+                      <button onClick={()=>setExpanded(p=>({...p,[`mc-${mq.num}`]:!p[`mc-${mq.num}`]}))}
+                        style={{width:"100%",display:"flex",alignItems:"center",gap:12,
+                          padding:"10px 14px",background:headerBg,border:"none",cursor:"pointer",
+                          fontFamily:font,textAlign:"left"}}>
+                        <span style={{width:30,height:30,borderRadius:6,flexShrink:0,
+                          background:isCorrect?"rgba(0,245,160,0.15)":unanswered?"rgba(255,255,255,0.06)":"rgba(255,71,87,0.15)",
+                          display:"flex",alignItems:"center",justifyContent:"center",
+                          fontWeight:800,fontSize:12,color:statusColor}}>{mq.num}</span>
+                        <span style={{flex:1,fontSize:13,color:"rgba(255,255,255,0.85)",fontWeight:500,
+                          overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{mq.stem}</span>
+                        <span style={{fontSize:12,fontWeight:700,color:statusColor,flexShrink:0,marginRight:4}}>{statusLabel}</span>
+                        <span style={{color:C.muted,fontSize:14,flexShrink:0}}>{isOpen?"▾":"▸"}</span>
+                      </button>
+                      {/* Expanded detail */}
+                      {isOpen && (
+                        <div style={{padding:"14px 16px",borderTop:`1px solid ${headerBorder}`,
+                          background:"rgba(255,255,255,0.02)"}}>
+                          {/* Full question stem */}
+                          <div style={{fontSize:13,lineHeight:1.7,color:"rgba(255,255,255,0.9)",
+                            marginBottom:14,fontWeight:500}}>{mq.stem}</div>
+                          {/* All choices */}
+                          <div style={{display:"flex",flexDirection:"column",gap:6}}>
+                            {Array.from({length:mq.choices.length/2},(_,i)=>{
+                              const letter = mq.choices[i*2];
+                              const text = mq.choices[i*2+1];
+                              const isAnswer = mq.answer === letter;
+                              const isChosen = chosen === letter;
+                              let bg, border, col;
+                              if (isAnswer && isChosen) {
+                                bg="rgba(0,245,160,0.12)"; border=`1.5px solid ${C.g}`; col=C.g;
+                              } else if (isAnswer) {
+                                bg="rgba(0,245,160,0.08)"; border=`1.5px solid rgba(0,245,160,0.4)`; col=C.g;
+                              } else if (isChosen) {
+                                bg="rgba(255,71,87,0.1)"; border=`1.5px solid rgba(255,71,87,0.4)`; col=C.r;
+                              } else {
+                                bg="rgba(255,255,255,0.02)"; border=`1px solid rgba(255,255,255,0.06)`; col=C.muted;
+                              }
+                              return (
+                                <div key={letter} style={{display:"flex",alignItems:"flex-start",gap:10,
+                                  padding:"8px 12px",background:bg,border,borderRadius:8}}>
+                                  <span style={{width:24,height:24,borderRadius:5,flexShrink:0,
+                                    background:isAnswer?"rgba(0,245,160,0.2)":isChosen?"rgba(255,71,87,0.2)":"rgba(255,255,255,0.06)",
+                                    display:"flex",alignItems:"center",justifyContent:"center",
+                                    fontWeight:800,fontSize:12,color:col}}>{letter}</span>
+                                  <span style={{fontSize:13,lineHeight:1.55,color:isAnswer||isChosen?"rgba(255,255,255,0.95)":"rgba(255,255,255,0.6)",
+                                    fontWeight:isAnswer?600:400,flex:1}}>{text}</span>
+                                  {isAnswer && isChosen && <span style={{fontSize:11,fontWeight:700,color:C.g,flexShrink:0}}>✓ Correct</span>}
+                                  {isAnswer && !isChosen && <span style={{fontSize:11,fontWeight:700,color:C.g,flexShrink:0}}>✓ Answer</span>}
+                                  {isChosen && !isAnswer && <span style={{fontSize:11,fontWeight:700,color:C.r,flexShrink:0}}>✗ Your pick</span>}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   );
                 })}
