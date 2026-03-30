@@ -465,6 +465,201 @@ Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feed
       },
     ],
   },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // OFFICIAL 2025 — SET 1 (FRQ only)
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id: "official2025s1",
+    label: "2025 AP Exam - Set 1",
+    year: "2025",
+    badge: "Official",
+    badgeColor: "#FF4757",
+    badgeBg: "rgba(255,71,87,0.15)",
+    badgeBorder: "rgba(255,71,87,0.3)",
+    description: "Official 2025 AP English Literature FRQ Set 1 — Poetry Analysis + Prose Fiction Analysis + Literary Argument.",
+    totalTime: 120 * 60,
+
+    questions: [
+      // ── FRQ 1: Poetry Analysis — McElroy "Monologue for Saint Louis" ──
+      {
+        num: 1,
+        type: "poetry-analysis",
+        title: "Poetry Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Colleen McElroy",
+        source: "\"Monologue for Saint Louis\" from Queen of the Ebony Isles (1984)",
+        context: "In Colleen McElroy's poem \"Monologue for Saint Louis,\" published in 1980, the speaker returns to her childhood home in St. Louis, Missouri, after an extended absence and contemplates how she has changed. Read the poem carefully.",
+        prompt: "In a well-written essay, analyze how McElroy uses literary elements and techniques to convey the speaker's complex experience of returning home.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "Monologue for Saint Louis" },
+          { lineStart: "", text: "" },
+          { lineStart: 1, text: "home again and the heart barely there" },
+          { lineStart: 2, text: "when choked by clusters of words" },
+          { lineStart: 3, text: "thick as the clumps of blue-black" },
+          { lineStart: 4, text: "grapes we snitched every summer" },
+          { lineStart: 5, text: "from the neighbor\u2019s arbor\u00B9" },
+          { lineStart: 6, text: "succulent pockets of flesh laced" },
+          { lineStart: 7, text: "with green staining our lips and fingers" },
+          { lineStart: "", text: "" },
+          { lineStart: 8, text: "it is summer again and I am home" },
+          { lineStart: 9, text: "vowing penance\u00B2 for all my disappearances" },
+          { lineStart: 10, text: "since that first summer" },
+          { lineStart: 11, text: "when the arbor was clotted" },
+          { lineStart: 12, text: "with pockets of grapes latticed on each" },
+          { lineStart: 13, text: "interlocking vine" },
+          { lineStart: "", text: "" },
+          { lineStart: 14, text: "now earthworms have trellised the arbor" },
+          { lineStart: 15, text: "and that crumbling heap of rotting black" },
+          { lineStart: 16, text: "sticks cannot shield us from wind or words" },
+          { lineStart: 17, text: "we are the women we whispered about each summer" },
+          { lineStart: 18, text: "familiar houses and schoolyards have disappeared" },
+          { lineStart: 19, text: "childhood streets are blocked with singular black" },
+          { lineStart: 20, text: "one-way signs aligned like a lacework" },
+          { lineStart: 21, text: "of warnings or accusing fingers" },
+          { lineStart: 22, text: "I am home again" },
+          { lineStart: 23, text: "and my cousins sit in their cloaks of black" },
+          { lineStart: 24, text: "skin dragging me through twisted vines" },
+          { lineStart: 25, text: "of genetic maps thick with childhood vows" },
+          { lineStart: "", text: "" },
+          { lineStart: 26, text: "they remember each summer" },
+          { lineStart: 27, text: "how each year I vowed to return home" },
+          { lineStart: 28, text: "forever but I am lost in a riddle of words" },
+          { lineStart: 29, text: "home is a vacant lot its back yard clotted" },
+          { lineStart: 30, text: "with a stainless-steel arch\u00B3 and clusters" },
+          { lineStart: 31, text: "of tiny parks sprouting like trelliswork" },
+          { lineStart: "", text: "" },
+          { lineStart: 32, text: "enclosing some strange summer" },
+          { lineStart: 33, text: "resort my cousins have disappeared" },
+          { lineStart: 34, text: "into like the shadows of beasts and bad air" },
+          { lineStart: 35, text: "that infect this flat country and I am home" },
+          { lineStart: 36, text: "a stranger in love with words" },
+          { lineStart: 37, text: "with tart sweet clusters of poems" },
+        ],
+        footnotes: [
+          "1 vining plants trained to grow over a lattice, framework, or trellis",
+          "2 an act that demonstrates regret and offers amends through self-sacrifice",
+          "3 the Gateway Arch, a 630-foot-tall arch located in a national park",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the poem. The thesis must provide a defensible interpretation of the speaker's complex experience of returning home." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations, may make one good point; 3 = specific evidence supporting claims in a line of reasoning, explains how at least one literary element contributes to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by: (1) identifying and exploring complexities or tensions within the poem, (2) situating the interpretation within a broader context, (3) accounting for alternative interpretations, or (4) employing a consistently vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Poetry Analysis essay (FRQ 1).
+The student analyzed Colleen McElroy's "Monologue for Saint Louis" — a poem about a speaker returning to her childhood home in St. Louis after an extended absence.
+Evaluate using the official AP Lit 2025 rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of literary elements: imagery (grapes, vines, arbor decay), repetition ("I am home"), diction ("clotted," "snitched," "succulent"), structure (progression from memory to present), figurative language, tone shifts, and how they convey the speaker's complex experience of returning home — nostalgia mixed with alienation and loss.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 2: Prose Fiction Analysis — Cusk, The Bradshaw Variations ──
+      {
+        num: 2,
+        type: "prose-analysis",
+        title: "Prose Fiction Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Rachel Cusk",
+        source: "The Bradshaw Variations (2008)",
+        context: "The following excerpt is from Rachel Cusk's novel The Bradshaw Variations, published in 2008. This passage describes Thomas Bradshaw's morning interactions with members of his household. Read the passage carefully.",
+        prompt: "In a well-written essay, analyze how Cusk uses literary elements and techniques to develop a complex portrayal of Thomas.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "Par." },
+          { lineStart: 1, text: "    What is art? Thomas Bradshaw asks himself this question frequently. He does not yet know" },
+          { lineStart: "", text: "the answer. He used to believe art was a kind of pretending, but he doesn\u2019t think that any more." },
+          { lineStart: "", text: "He uses the word authenticity to describe what he thinks now. Some things are artificial and" },
+          { lineStart: "", text: "some are authentic. It is easy to tell when something is artificial. The other is harder." },
+          { lineStart: "", text: "" },
+          { lineStart: 2, text: "    In the mornings he listens to music, to Bach or Schubert. He stands in the kitchen in his" },
+          { lineStart: "", text: "dressing gown. He waits for his wife and daughter to come downstairs. He is forty-one, the age" },
+          { lineStart: "", text: "when a life comes out of its own past like something out of a mould; and either it is solid, all of a" },
+          { lineStart: "", text: "piece, or it fails to hold its shape and disintegrates. The disintegration is not difficult to imagine." },
+          { lineStart: "", text: "It is the solidity, the concrete form, that is mystifying. Disintegration does not involve questions" },
+          { lineStart: "", text: "of authenticity, but of a solid form the questions must be asked." },
+          { lineStart: "", text: "" },
+          { lineStart: 3, text: "    Mostly, in fact, it is the lodger\u00B9 Olga who comes down first. He hears her tread on the stairs" },
+          { lineStart: "", text: "and doesn\u2019t recognise it: that is how, every day, he identifies her, by hearing her quiet, slightly" },
+          { lineStart: "", text: "plodding step and wondering who on earth it belongs to. She ducks her peroxided head at" },
+          { lineStart: "", text: "him, flashes her uncertain train-track smile. For six months now Olga has been embroiled in" },
+          { lineStart: "", text: "protracted dentistry. Beneath the metal braces her teeth are grey and disorderly. As a child her" },
+          { lineStart: "", text: "mother apparently never took her to the dentist. This was not out of neglect, Olga has told him." },
+          { lineStart: "", text: "It was because Olga was frightened of going, and her mother couldn\u2019t bear her to be frightened," },
+          { lineStart: "", text: "or to feel pain. She has told Thomas that she is saving up for a bridge and a set of caps. She" },
+          { lineStart: "", text: "has three different jobs and all the money goes on her teeth. She complains of the expense: in" },
+          { lineStart: "", text: "Poland the cost of dentistry is much lower. There, she could have all the work done\u2014\u2018All!\u2019 Olga" },
+          { lineStart: "", text: "repeats, making a chopping motion with her hand\u2014for what she pays here for just one monthly" },
+          { lineStart: "", text: "visit." },
+          { lineStart: "", text: "" },
+          { lineStart: 4, text: "    These conversations do not entirely engage Thomas. When he talks to Olga he is both there" },
+          { lineStart: "", text: "and not there. He is waiting for Tonie\u00B2 to come down, as the platform guard waits for the" },
+          { lineStart: "", text: "London train to come through. Tonie\u2019s appearances in the kitchen are brief. Like the train she" },
+          { lineStart: "", text: "stops, disgorging\u00B3 activity, and then departs again. It is a matter of minutes, but he needs to be" },
+          { lineStart: "", text: "ready. He hears Olga\u2014in some ways he even identifies himself with her, both of them platform" },
+          { lineStart: "", text: "dwellers\u2014but when she speaks he cannot reciprocate. He is as though sealed behind glass. He" },
+          { lineStart: "", text: "wonders if she realises this, realises that she can see but not touch him. She drinks tea from a" },
+          { lineStart: "", text: "giant Garfield\u2074 mug and eats cereal, topping up the milk frequently from the plastic container" },
+          { lineStart: "", text: "that stands beside her bowl. He glimpses her bare, mushroom-coloured legs beneath the table," },
+          { lineStart: "", text: "her feet clad in large soft slippers. He turns the music up a little: it is an offering, a form of" },
+          { lineStart: "", text: "explanation. He wants her to know that he is aware of his own limitations, of his failure to" },
+          { lineStart: "", text: "make anything of their conversations in the morning. Sometimes this failure appears to him" },
+          { lineStart: "", text: "as something intrinsic to time itself, as an inner force, like decay. They pass and are forgotten," },
+          { lineStart: "", text: "these interludes in the kitchen. And yet they are always the same: he could stand here for" },
+          { lineStart: "", text: "a hundred years and still have much the same conversation with Olga. There are, it seems," },
+          { lineStart: "", text: "limitless copies of this conversation, but it never goes anywhere or develops. By the same token," },
+          { lineStart: "", text: "it never dies. It has no relationship to time. This may be because it lacks authenticity." },
+        ],
+        footnotes: [
+          "1 a person who rents a room in a house",
+          "2 his wife",
+          "3 pouring out, releasing",
+          "4 a cartoon cat",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the passage. The thesis must provide a defensible interpretation of the complex portrayal of Thomas." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations, may make one good point; 3 = specific evidence supporting claims in a line of reasoning, explains how at least one literary element contributes to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by: (1) identifying and exploring complexities or tensions within the passage, (2) situating the interpretation within a broader context, (3) accounting for alternative interpretations, or (4) employing a consistently vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Prose Fiction Analysis essay (FRQ 2).
+The student analyzed an excerpt from Rachel Cusk's The Bradshaw Variations (2008) — a passage about Thomas Bradshaw's morning interactions with his lodger Olga while waiting for his wife Tonie.
+Evaluate using the official AP Lit 2025 rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of narrative techniques: point of view (close third person), characterization (Thomas's introspection, his relationship to authenticity), imagery (platform guard metaphor, sealed behind glass), diction, figurative language, and how they develop a complex portrayal of Thomas — his philosophical nature, emotional distance, self-awareness of his limitations, and preoccupation with authenticity vs. artificiality.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 3: Literary Argument — Memories of the Past ──
+      {
+        num: 3,
+        type: "literary-argument",
+        title: "Literary Argument",
+        points: 6,
+        suggestedTime: 40,
+        prompt: `In many works of literature, characters may be significantly affected by memories of the past. A character may be inspired by the past, haunted by the past, unable to let go of the past, or motivated by the past to craft a better future.
+
+Either from your own reading or from the list below, choose a work of fiction in which a character is significantly affected by a memory. Then, in a well-written essay, analyze how the impact of the memory on the character contributes to an interpretation of the work as a whole. Do not merely summarize the plot.
+
+In your response you should do the following:
+\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.
+\u2022 Provide evidence to support your line of reasoning.
+\u2022 Explain how the evidence supports your line of reasoning.
+\u2022 Use appropriate grammar and punctuation in communicating your argument.
+
+Suggested works:
+Afterlife, Annie John, Behold the Dreamers, Beloved, Big Fish, The Buried Giant, Ceremony, Crime and Punishment, A Doll\u2019s House, Dominicana, The English Patient, The Farming of Bones, Fences, A Gesture Life, The Glass Menagerie, The Importance of Being Earnest, Invisible Man, Jane Eyre, Kindred, Love Medicine, Macbeth, The Mayor of Casterbridge, Mrs. Dalloway, The Nickel Boys, Obasan, Of Mice and Men, On Earth We\u2019re Briefly Gorgeous, Purple Hibiscus, The Scarlet Letter, The Secret History, The Sound and the Fury, A Tale of Two Cities, Washington Black, The Woman Warrior, Wuthering Heights, The Yellow Birds`,
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the selected work. The thesis must provide a defensible interpretation of the impact of a memory on a character in the selected work, or make a claim about how the impact of a memory on a character contributes to an interpretation of the work as a whole." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, tends to focus on overarching narrative or description rather than specific details; 2 = some specific evidence with broad generalizations, may make one good point; 3 = specific evidence supporting claims in a line of reasoning, focuses on importance of specific details from selected work; 4 = specific evidence supporting all claims, consistently explains how specific details contribute to interpretation of the work as a whole." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by: (1) identifying and exploring complexities or tensions within the selected work, (2) situating the interpretation within a broader context, (3) accounting for alternative interpretations, or (4) employing a consistently vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Literary Argument essay (FRQ 3).
+The student chose their own literary work to respond to a prompt about how memories of the past significantly affect a character — a character may be inspired by, haunted by, unable to let go of, or motivated by the past.
+Evaluate using the official AP Lit 2025 rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+The student must demonstrate genuine knowledge of their chosen work, not just plot summary. Look for a clear interpretive claim about how the impact of the memory on the character contributes to an interpretation of the work as a whole, supported by specific textual evidence with insightful commentary.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+    ],
+  },
 ];
 
 export default ALL_TESTS;
