@@ -1091,6 +1091,251 @@ Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feed
       },
     ],
   },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // OFFICIAL 2024 — SET 2 (FRQ only)
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id: "official2024s2",
+    label: "2024 AP Exam - Set 2",
+    year: "2024",
+    badge: "Official",
+    badgeColor: "#FF4757",
+    badgeBg: "rgba(255,71,87,0.15)",
+    badgeBorder: "rgba(255,71,87,0.3)",
+    description: "Official 2024 AP English Literature FRQ Set 2 — Poetry Analysis + Prose Fiction Analysis + Literary Argument.",
+    totalTime: 120 * 60,
+
+    questions: [
+      // ── FRQ 1: Poetry Analysis — Horton "On Summer" ──
+      {
+        num: 1,
+        type: "poetry-analysis",
+        title: "Poetry Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "George Moses Horton",
+        source: "\"On Summer\" (1829)",
+        context: "In George Moses Horton\u2019s poem \u201cOn Summer,\u201d published in 1829, the author describes multiple aspects of summer in a rural area. Read the poem carefully.",
+        prompt: "In a well-written essay, analyze how Horton uses literary elements and techniques to develop a complex portrayal of the setting.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "On Summer" },
+          { lineStart: "", text: "" },
+          { lineStart: 1, text: "Esteville\u00B9 fire begins to burn;" },
+          { lineStart: 2, text: "The auburn fields of harvest rise;" },
+          { lineStart: 3, text: "The torrid flames again return," },
+          { lineStart: 4, text: "And thunders roll along the skies." },
+          { lineStart: "", text: "" },
+          { lineStart: 5, text: "Perspiring Cancer\u00B2 lifts his head," },
+          { lineStart: 6, text: "And roars terrific from on high;" },
+          { lineStart: 7, text: "Whose voice the timid creatures dread," },
+          { lineStart: 8, text: "From which they strive with awe to fly." },
+          { lineStart: "", text: "" },
+          { lineStart: 9, text: "The night-hawk ventures from his cell," },
+          { lineStart: 10, text: "And starts his note in evening air;" },
+          { lineStart: 11, text: "He feels the heat his bosom swell," },
+          { lineStart: 12, text: "Which drives away the gloom of fear." },
+          { lineStart: "", text: "" },
+          { lineStart: 13, text: "Thou noisy insect, start thy drum;" },
+          { lineStart: 14, text: "Rise lamp-like bugs to light the train;" },
+          { lineStart: 15, text: "And bid sweet Philomela\u00B3 come," },
+          { lineStart: 16, text: "And sound in front the nightly strain." },
+          { lineStart: "", text: "" },
+          { lineStart: 17, text: "The bee begins her ceaseless hum," },
+          { lineStart: 18, text: "And doth with sweet exertions rise;" },
+          { lineStart: 19, text: "And with delight she stores her comb," },
+          { lineStart: 20, text: "And well her rising stock supplies." },
+          { lineStart: "", text: "" },
+          { lineStart: 21, text: "Let sportive children well beware," },
+          { lineStart: 22, text: "While sprightly frisking o\u2019er the green;" },
+          { lineStart: 23, text: "And carefully avoid the snare," },
+          { lineStart: 24, text: "Which lurks beneath the smiling scene." },
+          { lineStart: "", text: "" },
+          { lineStart: 25, text: "The mistress bird assumes her nest," },
+          { lineStart: 26, text: "And broods in silence on the tree," },
+          { lineStart: 27, text: "Her note to cease, her wings at rest," },
+          { lineStart: 28, text: "She patient waits her young to see." },
+          { lineStart: "", text: "" },
+          { lineStart: 29, text: "The farmer hastens from the heat;" },
+          { lineStart: 30, text: "The weary plough-horse droops his head;" },
+          { lineStart: 31, text: "The cattle all at noon retreat," },
+          { lineStart: 32, text: "And ruminate beneath the shade." },
+          { lineStart: "", text: "" },
+          { lineStart: 33, text: "The burdened ox with dauntless rage," },
+          { lineStart: 34, text: "Flies heedless to the liquid flood," },
+          { lineStart: 35, text: "From which he quaffs,\u2074 devoid of gauge,\u2075" },
+          { lineStart: 36, text: "Regardless of his driver\u2019s rod." },
+          { lineStart: "", text: "" },
+          { lineStart: 37, text: "Pomaceous\u2076 orchards now expand" },
+          { lineStart: 38, text: "Their laden branches o\u2019er the lea;" },
+          { lineStart: 39, text: "And with their bounty fill the land," },
+          { lineStart: 40, text: "While plenty smiles on every tree." },
+          { lineStart: "", text: "" },
+          { lineStart: 41, text: "On fertile borders, near the stream," },
+          { lineStart: 42, text: "Now gaze with pleasure and delight;" },
+          { lineStart: 43, text: "See loaded vines with melons teem\u2014" },
+          { lineStart: 44, text: "\u2019Tis paradise to human sight." },
+          { lineStart: "", text: "" },
+          { lineStart: 45, text: "With rapture view the smiling fields," },
+          { lineStart: 46, text: "Adorn the mountain and the plain," },
+          { lineStart: 47, text: "Each, on the eve of Autumn, yields" },
+          { lineStart: 48, text: "A large supply of golden grain." },
+        ],
+        footnotes: [
+          "1 a town in North Carolina",
+          "2 zodiac constellation associated with midsummer",
+          "3 a character in Greek mythology who was transformed into a nightingale",
+          "4 drinks",
+          "5 measure",
+          "6 of or relating to apples",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the poem." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Poetry Analysis essay (FRQ 1).
+The student analyzed George Moses Horton's "On Summer" (1829) — a poem describing multiple aspects of summer in a rural setting, from the fierce heat and thundering skies to industrious bees, nesting birds, retreating cattle, and abundant orchards.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of literary elements: imagery (heat, harvest, animals, abundance), personification (Cancer, bee, ox), tone (shifts between danger/discomfort and beauty/plenty), structure (progression through scenes), diction, classical allusions (Philomela, Cancer), and how they develop a complex portrayal of the setting — summer as both threatening and bountiful, harsh and beautiful.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 2: Prose Fiction Analysis — Urquhart, The Night Stages ──
+      {
+        num: 2,
+        type: "prose-analysis",
+        title: "Prose Fiction Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Jane Urquhart",
+        source: "The Night Stages (2015)",
+        context: "The following excerpt is from Jane Urquhart\u2019s novel The Night Stages, published in 2015. In this passage, an artist named Kenneth is finishing a mural for a new airline terminal using the long-established medium of egg tempera, a paint made of egg yolk, pigment, and water. He thinks about the influences on his work and how his mural may be received. Read the passage carefully.",
+        prompt: "In a well-written essay, analyze how Urquhart uses literary elements and techniques to convey Kenneth\u2019s complex perspective as he completes his mural.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: 1, text: "    It had taken him three months to complete the" },
+          { lineStart: 2, text: "thirty-six four-by-six-foot panels that would join" },
+          { lineStart: 3, text: "together, like a huge puzzle, to form the immense" },
+          { lineStart: 4, text: "mural. The last thing he painted, on the final morning," },
+          { lineStart: 5, text: "was a third apple\u2014airborne\u2014tossed by a child" },
+          { lineStart: 6, text: "juggler. The apples were like tiny planets, and the" },
+          { lineStart: 7, text: "child, otherwise small and unexceptional, gained" },
+          { lineStart: 8, text: "power through his manipulation of them. Kenneth had" },
+          { lineStart: 9, text: "to break one last egg to paint this, and as he passed it" },
+          { lineStart: 10, text: "from hand to hand, letting the white drain to the floor," },
+          { lineStart: 11, text: "and allowing the clean yolk to settle in his palm, he" },
+          { lineStart: 12, text: "looked at this boy\u2014his serene, confident expression," },
+          { lineStart: 13, text: "the three apples aloft, the face calm with the" },
+          { lineStart: 14, text: "knowledge that they would be kept in the air" },
+          { lineStart: 15, text: "indefinitely. While Kenneth mixed the yolk with the" },
+          { lineStart: 16, text: "warm shades of ground pigment, he remembered the" },
+          { lineStart: 17, text: "critic telling him to keep things on the picture plane" },
+          { lineStart: 18, text: "flat, two-dimensional, and he smiled as the apple" },
+          { lineStart: 19, text: "became spherical under his brush. When he could" },
+          { lineStart: 20, text: "imagine the weight of it in his hand, he knew he was" },
+          { lineStart: 21, text: "finished. Then he began to toss brushes, palettes, and" },
+          { lineStart: 22, text: "pigments down to the floor below. There was a drill" },
+          { lineStart: 23, text: "shrieking somewhere in the building. The clatter his" },
+          { lineStart: 24, text: "tools made on landing must have been drowned out by" },
+          { lineStart: 25, text: "its noise." },
+          { lineStart: 26, text: "    Kenneth figured he had broken five thousand eggs," },
+          { lineStart: 27, text: "more or less, in the making of the mural, and each" },
+          { lineStart: 28, text: "time he broke the shell, he thought of the critic\u2019s head," },
+          { lineStart: 29, text: "the smooth baldness of the top of it. Humpty-" },
+          { lineStart: 30, text: "Dumpty,\u00B9 he thought, this wall, and the wall of" },
+          { lineStart: 31, text: "cultural fashion that could keep you out, for a while," },
+          { lineStart: 32, text: "until the great fall. By now he knew that fashion" },
+          { lineStart: 33, text: "always fell, it failed and fell. He was happy to be free" },
+          { lineStart: 34, text: "of it. And as he used the shell to separate the white" },
+          { lineStart: 35, text: "from the yolk, he thought about Harding,\u00B2 a man who" },
+          { lineStart: 36, text: "had never made use of egg tempera. He wondered" },
+          { lineStart: 37, text: "what had become of him. And the woman Harding" },
+          { lineStart: 38, text: "had loved, whether she had ever painted again, and" },
+          { lineStart: 39, text: "whether or not he himself would ever come across a" },
+          { lineStart: 40, text: "painting by Gentleman.\u00B3 The girl in Germany, the" },
+          { lineStart: 41, text: "couple in Italy,\u2074 floated by, a sense of them here and" },
+          { lineStart: 42, text: "there in the mural. These narratives fought for space" },
+          { lineStart: 43, text: "in his mind. But the mural itself, he knew, was" },
+          { lineStart: 44, text: "divorced from narrative. As it should be, he whispered" },
+          { lineStart: 45, text: "to himself, as it should be. Flight and Its Allegories.\u2075" },
+          { lineStart: 46, text: "    Once he was on the ground, he rifled through a" },
+          { lineStart: 47, text: "canvas sack until he found the camera he was looking" },
+          { lineStart: 48, text: "for, a Brownie Starflex, with six exposures still" },
+          { lineStart: 49, text: "available. He shot the mural from left to right. Then" },
+          { lineStart: 50, text: "he walked across the full length of the half-tiled floor." },
+          { lineStart: 51, text: "This was the last exposure and it would make the" },
+          { lineStart: 52, text: "mural look incredibly small, like a two-inch-long" },
+          { lineStart: 53, text: "piece of ribbon with an unreadable pattern on it. But" },
+          { lineStart: 54, text: "he wanted to show its proportions to a friend and, in" },
+          { lineStart: 55, text: "any case, the more professional pictures would be" },
+          { lineStart: 56, text: "taken later, after he was gone, when the mural had" },
+          { lineStart: 57, text: "begun to live its own independent life in the presence" },
+          { lineStart: 58, text: "of an audience." },
+          { lineStart: 59, text: "    For months now there had been noise, the" },
+          { lineStart: 60, text: "workmen\u2019s power tools and, in the odd moments" },
+          { lineStart: 61, text: "when those were silent, the roar of the planes arriving" },
+          { lineStart: 62, text: "and departing at the old, soon-to-be abandoned" },
+          { lineStart: 63, text: "terminal. He had seen the passengers, through the" },
+          { lineStart: 64, text: "plate glass of the windows, rivers of them, pouring" },
+          { lineStart: 65, text: "down the steps that were pushed up to airliners, then" },
+          { lineStart: 66, text: "flowing darkly across the tarmac. What would they" },
+          { lineStart: 67, text: "make of Flight and Its Allegories? Would they be" },
+          { lineStart: 68, text: "struck by it? Or would they simply pass it by," },
+          { lineStart: 69, text: "preoccupied by the mysteries of their individual lives" },
+          { lineStart: 70, text: "as they walked forward or waited in the lounge? He" },
+          { lineStart: 71, text: "was not unaware that public art could be\u2014and often" },
+          { lineStart: 72, text: "was\u2014ignored. Still, what pleasure he had taken in the" },
+          { lineStart: 73, text: "making of it." },
+        ],
+        footnotes: [
+          "1 Humpty-Dumpty is a nursery-rhyme character, typically depicted as an egg. He falls from a wall, breaks, and cannot be put together again.",
+          "2 Kenneth\u2019s former art teacher, who cautioned Kenneth against appropriating the ideas, styles, and techniques of other artists",
+          "3 Alexander Gentleman, an obscure artist that Harding once knew; another artist later copied his style and gained fame as a result",
+          "4 \u201cThe girl in Germany\u201d and \u201cthe couple in Italy\u201d are people Kenneth met while backpacking through Europe.",
+          "5 Allegories are works of literature or art that express moral or political messages, often through the use of symbols.",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the passage." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Prose Fiction Analysis essay (FRQ 2).
+The student analyzed an excerpt from Jane Urquhart's The Night Stages (2015) — a passage about Kenneth, an artist finishing a large mural ("Flight and Its Allegories") in an airline terminal using egg tempera, reflecting on artistic influences, critics, and whether his public art will be noticed or ignored.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of narrative techniques: imagery (egg yolk/shell as artistic process, juggling boy, rivers of passengers), symbolism (Humpty-Dumpty, the mural's independent life), characterization (Kenneth's defiance of critics, his artistic confidence yet vulnerability), tone (satisfaction mixed with uncertainty), diction, and how they convey Kenneth's complex perspective — pride in craft, rejection of fashion, awareness of art's fragility and potential irrelevance, and quiet fulfillment in creation itself.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 3: Literary Argument — A Character's Unfulfilled Need ──
+      {
+        num: 3,
+        type: "literary-argument",
+        title: "Literary Argument",
+        points: 6,
+        suggestedTime: 40,
+        prompt: `Many works of literature explore a character\u2019s sense of lacking something important in life. The character perceives an unfulfilled need which may be emotional, spiritual, financial, or something the character does not understand or cannot articulate. Either from your own reading or from the following list, choose a work of fiction in which such a feeling is explored. Then, in a well-written essay, analyze how the character\u2019s sense of an unfulfilled need contributes to an interpretation of the work as a whole. Do not merely summarize the plot.
+
+In your response you should do the following:
+\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.
+\u2022 Provide evidence to support your line of reasoning.
+\u2022 Explain how the evidence supports your line of reasoning.
+\u2022 Use appropriate grammar and punctuation in communicating your argument.
+
+Suggested works:
+Antigone, The Awakening, The Bell Jar, Brave New World, Ceremony, Death of a Salesman, Don Quixote, Fences, Frankenstein, The Goldfinch, The Handmaid\u2019s Tale, How the Garc\u00eda Girls Lost Their Accents, Howards End, The Hundred Secret Senses, If Beale Street Could Talk, Invisible Man, Jane Eyre, Kindred, Little Fires Everywhere, Macbeth, Moby-Dick, Native Son, On Earth We\u2019re Briefly Gorgeous, One Flew Over the Cuckoo\u2019s Nest, Passing, A Raisin in the Sun, Sag Harbor, The Scarlet Letter, The Secret Life of Bees, Song of Solomon, Sweat, Swing Time, The Tempest, There There, A Thousand Splendid Suns, To the Lighthouse, The Visit, When the Emperor Was Divine, White Noise, Wuthering Heights`,
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the selected work." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning; 4 = specific evidence supporting all claims, consistently explains how details contribute to interpretation of the work as a whole." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Literary Argument essay (FRQ 3).
+The student chose their own literary work to respond to a prompt about a character's sense of lacking something important in life — an unfulfilled need that may be emotional, spiritual, financial, or something the character cannot articulate — and how that sense contributes to an interpretation of the work as a whole.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+The student must demonstrate genuine knowledge of their chosen work, not just plot summary. Look for a clear interpretive claim about how the character's unfulfilled need contributes to the meaning of the work as a whole, supported by specific textual evidence with insightful commentary.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+    ],
+  },
 ];
 
 export default ALL_TESTS;
