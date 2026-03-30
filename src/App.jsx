@@ -115,7 +115,7 @@ function FeedbackBox({ text, loading }) {
         {loading
           ? <><span style={{width:10,height:10,borderRadius:"50%",border:`2px solid ${C.b}`,
               borderTopColor:"transparent",animation:"spin 0.8s linear infinite",display:"inline-block"}}/> Generating AI Feedback...</>
-          : <>\u2726 AI Feedback</>}
+          : <>✦ AI Feedback</>}
       </div>
       {!loading && text}
     </div>
