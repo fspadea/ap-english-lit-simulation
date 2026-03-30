@@ -1562,6 +1562,227 @@ Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feed
       },
     ],
   },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // OFFICIAL 2023 — SET 2 (FRQ only)
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id: "official2023s2",
+    label: "2023 AP Exam - Set 2",
+    year: "2023",
+    badge: "Official",
+    badgeColor: "#FF4757",
+    badgeBg: "rgba(255,71,87,0.15)",
+    badgeBorder: "rgba(255,71,87,0.3)",
+    description: "Official 2023 AP English Literature FRQ Set 2 — Poetry Analysis + Prose Fiction Analysis + Literary Argument.",
+    totalTime: 120 * 60,
+
+    questions: [
+      // ── FRQ 1: Poetry Analysis — Channing "The Barren Moors" ──
+      {
+        num: 1,
+        type: "poetry-analysis",
+        title: "Poetry Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "William Ellery Channing",
+        source: "\"The Barren Moors\" (1843)",
+        context: "In William Ellery Channing\u2019s poem \u201cThe Barren Moors,\u201d published in 1843, the speaker addresses moors, open expanses of wild, uncultivated land. Read the poem carefully.",
+        prompt: "In a well-written essay, analyze how Channing uses literary elements and techniques to develop a complex portrayal of the speaker\u2019s experience of this natural setting.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "The Barren Moors" },
+          { lineStart: "", text: "" },
+          { lineStart: 1, text: "On your bare rocks, O barren moors," },
+          { lineStart: 2, text: "On your bare rocks I love to lie,\u2014" },
+          { lineStart: 3, text: "They stand like crags upon the shores," },
+          { lineStart: 4, text: "Or clouds upon a placid sky." },
+          { lineStart: "", text: "" },
+          { lineStart: 5, text: "Across those spaces desolate," },
+          { lineStart: 6, text: "The fox pursues his lonely way," },
+          { lineStart: 7, text: "Those solitudes can fairly sate\u00B9" },
+          { lineStart: 8, text: "The passage of my loneliest day." },
+          { lineStart: "", text: "" },
+          { lineStart: 9, text: "Like desert Islands far at sea" },
+          { lineStart: 10, text: "Where not a ship can ever land," },
+          { lineStart: 11, text: "Those dim uncertainties to me," },
+          { lineStart: 12, text: "For something veritable stand." },
+          { lineStart: "", text: "" },
+          { lineStart: 13, text: "A serious place distinct from all" },
+          { lineStart: 14, text: "Which busy Life delights to feel," },
+          { lineStart: 15, text: "I stand in this deserted hall," },
+          { lineStart: 16, text: "And thus the wounds of time conceal." },
+          { lineStart: "", text: "" },
+          { lineStart: 17, text: "No friend\u2019s cold eye, or sad delay," },
+          { lineStart: 18, text: "Shall vex me now where not a sound" },
+          { lineStart: 19, text: "Falls on the ear, and every day" },
+          { lineStart: 20, text: "Is soft as silence most profound." },
+          { lineStart: "", text: "" },
+          { lineStart: 21, text: "No more upon these distant wolds\u00B2" },
+          { lineStart: 22, text: "The agitating world can come," },
+          { lineStart: 23, text: "A single pensive thought upholds" },
+          { lineStart: 24, text: "The arches of this dreamy home." },
+          { lineStart: "", text: "" },
+          { lineStart: 25, text: "Within the sky above, one thought" },
+          { lineStart: 26, text: "Replies to you, O barren moors!" },
+          { lineStart: 27, text: "Between, I stand, a creature taught" },
+          { lineStart: 28, text: "To stand between two silent floors." },
+        ],
+        footnotes: [
+          "1 fully satisfy",
+          "2 hills",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the poem." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Poetry Analysis essay (FRQ 1).
+The student analyzed William Ellery Channing's "The Barren Moors" (1843) — a poem in which the speaker addresses barren moors, finding solace and meaning in their desolate emptiness, using them as a refuge from the agitations of the world and the wounds of time.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of literary elements: apostrophe (addressing the moors), simile (crags, clouds, desert islands), imagery (barren rocks, silence, sky), tone (contemplative, peaceful, melancholy), paradox (finding satisfaction in desolation, uncertainty standing for something "veritable"), structure (movement from physical landscape to inner experience), and how they develop a complex portrayal of the speaker's experience — solitude as both refuge and philosophical state, the barren landscape as a mirror for inner life.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 2: Prose Fiction Analysis — Peynado "The Rock Eaters" ──
+      {
+        num: 2,
+        type: "prose-analysis",
+        title: "Prose Fiction Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Brenda Peynado",
+        source: "\"The Rock Eaters\" (2021)",
+        context: "The following excerpt is from Brenda Peynado\u2019s short story \u201cThe Rock Eaters,\u201d published in 2021. In this passage, the narrator is one of a group of people who left their home country after developing the ability to fly, an ability that is accepted as realistically possible within the story. Years later, the group returns to that country with their children. Read the passage carefully.",
+        prompt: "In a well-written essay, analyze how Peynado uses literary elements and techniques to convey the narrator\u2019s complex experience of this return home.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: 1, text: "    We were the first generation to leave our island" },
+          { lineStart: 2, text: "country. We were the ones who developed a distinct" },
+          { lineStart: 3, text: "float to our walk on the day we came of age. Soon" },
+          { lineStart: 4, text: "enough we were hovering inches above the ground," },
+          { lineStart: 5, text: "then somersaulting with the clouds, finally" },
+          { lineStart: 6, text: "discovering we could fly as far as we\u2019d ever wanted." },
+          { lineStart: 7, text: "And so we left. Decades later, we brought our" },
+          { lineStart: 8, text: "children back to see our home country. That year, we" },
+          { lineStart: 9, text: "all decided we were ready to return." },
+          { lineStart: 10, text: "    We jackknifed through clouds and dodged large" },
+          { lineStart: 11, text: "birds. We held our children tightly; they had not yet" },
+          { lineStart: 12, text: "learned to fly. Behind us trailed roped-together lines" },
+          { lineStart: 13, text: "of suitcases packed with gifts from abroad. We" },
+          { lineStart: 14, text: "wondered who would remember us." },
+          { lineStart: 15, text: "    Our parents, those who were still alive, came out to" },
+          { lineStart: 16, text: "greet us, hands on their brows like visors. Some were" },
+          { lineStart: 17, text: "expecting us. Others were surprised, terrified at the" },
+          { lineStart: 18, text: "spectacle of millions of their prodigals\u00B9 blotting the" },
+          { lineStart: 19, text: "sky with our billowing skirts, our shirts starched for" },
+          { lineStart: 20, text: "the arrival. We touched down on our parents\u2019" },
+          { lineStart: 21, text: "driveways, skidding to rough landings at their feet," },
+          { lineStart: 22, text: "denting cars, squashing flowers, rattling windows." },
+          { lineStart: 23, text: "    Our old friends and siblings, the ones we\u2019d left" },
+          { lineStart: 24, text: "behind, kept their doors locked. They peered through" },
+          { lineStart: 25, text: "window blinds at the flattened flowerbeds, the" },
+          { lineStart: 26, text: "suitcases that had burst and strewn packages all over" },
+          { lineStart: 27, text: "the yards and streets, our youngest children squealing" },
+          { lineStart: 28, text: "now that they\u2019d been released, the peace we\u2019d broken" },
+          { lineStart: 29, text: "by returning. They didn\u2019t trust us, not after our" },
+          { lineStart: 30, text: "betrayal decades ago, the whiff of money we\u2019d earned" },
+          { lineStart: 31, text: "or lost in other countries like a suspect stench. Our" },
+          { lineStart: 32, text: "parents hugged their grandchildren and brought them" },
+          { lineStart: 33, text: "inside to houses with no electricity, candles wavering" },
+          { lineStart: 34, text: "like we were in a s\u00e9ance. \u201cMore brownouts,\u201d they told" },
+          { lineStart: 35, text: "us. \u201cWe remember,\u201d we said, recoiling at how little" },
+          { lineStart: 36, text: "the place fit us anymore. Those first nights we slept in" },
+          { lineStart: 37, text: "our old beds, our feet hanging over the edges, the" },
+          { lineStart: 38, text: "noises of the city and the country crowing and" },
+          { lineStart: 39, text: "honking us awake, music from radios and guitars," },
+          { lineStart: 40, text: "celebrations we\u2019d not been invited to." },
+          { lineStart: 41, text: "    We dragged our children along to knock on the" },
+          { lineStart: 42, text: "doors of old friends and siblings, the ones who never" },
+          { lineStart: 43, text: "developed the ability to fly. They eventually," },
+          { lineStart: 44, text: "reluctantly, opened their doors. At first we sat stiffly" },
+          { lineStart: 45, text: "on couches and inquired after their health and others" },
+          { lineStart: 46, text: "we once knew. Then we got them to laugh with us" },
+          { lineStart: 47, text: "about the time we pulled the nuns\u2019 skirts or put gum" },
+          { lineStart: 48, text: "in the kink of a rival\u2019s hair, when we caught baby" },
+          { lineStart: 49, text: "chicks in the village and raised them, or cracked open" },
+          { lineStart: 50, text: "almonds on the malec\u00f3n.\u00B2 Then their children came" },
+          { lineStart: 51, text: "shyly out of their rooms and took ours by the hand." },
+          { lineStart: 52, text: "We smiled when we saw them climbing trees together" },
+          { lineStart: 53, text: "in the patios, their children showing ours how to eat" },
+          { lineStart: 54, text: "cajuilitos solim\u00e1n and acerolas\u00B3 from the branch." },
+          { lineStart: 55, text: "    We introduced our children to everyone we used to" },
+          { lineStart: 56, text: "know: at colmados,\u2074 by the side of the road, at the" },
+          { lineStart: 57, text: "baseball fields, at country clubs we had to beg to be" },
+          { lineStart: 58, text: "let back into. We showed our children the flamboy\u00e1n" },
+          { lineStart: 59, text: "trees in the parks, blooms of coral red spilling in the" },
+          { lineStart: 60, text: "dirt. We showed them the granite striated through the" },
+          { lineStart: 61, text: "rock faces of mountains, the glimmering pebbles" },
+          { lineStart: 62, text: "under waterfalls, the red dust that stained the seats of" },
+          { lineStart: 63, text: "their best clothes. We walked past the stray dogs that" },
+          { lineStart: 64, text: "growled and whined; the most ancient among them" },
+          { lineStart: 65, text: "remembered us, wagging their tails when they saw us" },
+          { lineStart: 66, text: "and running to sniff our offspring. We dunked our" },
+          { lineStart: 67, text: "children into the rivers we\u2019d once swum. We dug" },
+          { lineStart: 68, text: "through the banks for the arrowheads that belonged to" },
+          { lineStart: 69, text: "the Tainos, who\u2019d been erased after the Spanish came," },
+          { lineStart: 70, text: "their remnants lost in the mud." },
+          { lineStart: 71, text: "    Lost, the children whispered in awe and fear," },
+          { lineStart: 72, text: "turning the black, glinting points in their palms," },
+          { lineStart: 73, text: "testing the hardness of flint between their teeth. Back" },
+          { lineStart: 74, text: "in our foreign homes, we had never talked to them of" },
+          { lineStart: 75, text: "history." },
+          { lineStart: 76, text: "    We remembered we\u2019d been happy. \u201cWe loved this" },
+          { lineStart: 77, text: "land,\u201d we said. We forget why we ever left." },
+        ],
+        footnotes: [
+          "1 children who have left home and then returned",
+          "2 a walkway along a waterfront",
+          "3 Cajuilitos solim\u00e1n and acerolas are types of fruit.",
+          "4 neighborhood stores",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the passage." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Prose Fiction Analysis essay (FRQ 2).
+The student analyzed an excerpt from Brenda Peynado's "The Rock Eaters" (2021) — a magical realist passage narrated in first-person plural ("we") about a group of people who developed the ability to fly, left their island country, and decades later return with their children to reconnect with family, friends, and homeland.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of narrative techniques: first-person plural narration (collective voice), magical realism (flight as metaphor for emigration), imagery (flattened flowerbeds, candles like séance, arrowheads in mud), tone (nostalgia, guilt, longing, joy), juxtaposition (leaving vs. returning, trust vs. betrayal), sensory details of the homeland, symbolism (Taino arrowheads/erasure, children bridging divide), and how they convey the narrator's complex experience — the tension between belonging and displacement, the guilt of leaving, the impossibility of fully returning, and the bittersweet attempt to pass on a heritage.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 3: Literary Argument — A Rebel Character ──
+      {
+        num: 3,
+        type: "literary-argument",
+        title: "Literary Argument",
+        points: 6,
+        suggestedTime: 40,
+        prompt: `Many works of literature feature a rebel character who changes or disrupts the existing state of societal, familial, or political affairs in the text. They may break social norms, challenge long-held values, subvert expectations, or participate in other forms of resistance. The character\u2019s motivation for this rebellious behavior is often complex.
+
+Either from your own reading or from the list below, choose a work of fiction in which a character changes or disrupts the existing state of societal, familial, or political affairs. Then, in a well-written essay, analyze how the complex motivation of the rebel contributes to an interpretation of the work as a whole. Do not merely summarize the plot.
+
+In your response you should do the following:
+\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.
+\u2022 Provide evidence to support your line of reasoning.
+\u2022 Explain how the evidence supports your line of reasoning.
+\u2022 Use appropriate grammar and punctuation in communicating your argument.
+
+Suggested works:
+Antigone, Arcadia, Atonement, The Awakening, Brave New World, Catch-22, Ceremony, The Color Purple, The Crucible, Fahrenheit 451, Fences, Frankenstein, The Glass Menagerie, Grendel, Half of a Yellow Sun, The Handmaid\u2019s Tale, House Made of Dawn, The House of the Spirits, In the Time of the Butterflies, Invisible Man, Jane Eyre, The Joy Luck Club, Kindred, King Lear, Let the Great World Spin, Love Medicine, Moll Flanders, The Namesake, Native Son, Never Let Me Go, The Nickel Boys, One Flew Over the Cuckoo\u2019s Nest, Paradise Lost, Pride and Prejudice, A Raisin in the Sun, The Scarlet Letter, Southernmost, Sula, Their Eyes Were Watching God, There There, Washington Black, Wuthering Heights`,
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the selected work." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning; 4 = specific evidence supporting all claims, consistently explains how details contribute to interpretation of the work as a whole." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Literary Argument essay (FRQ 3).
+The student chose their own literary work to respond to a prompt about a rebel character who changes or disrupts societal, familial, or political affairs — breaking norms, challenging values, subverting expectations, or resisting — and how the complex motivation of the rebel contributes to an interpretation of the work as a whole.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+The student must demonstrate genuine knowledge of their chosen work, not just plot summary. Look for a clear interpretive claim about how the rebel's complex motivation contributes to the meaning of the work as a whole, supported by specific textual evidence with insightful commentary.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+    ],
+  },
 ];
 
 export default ALL_TESTS;
