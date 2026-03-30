@@ -1336,6 +1336,232 @@ Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feed
       },
     ],
   },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // OFFICIAL 2023 — SET 1 (FRQ only)
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id: "official2023s1",
+    label: "2023 AP Exam - Set 1",
+    year: "2023",
+    badge: "Official",
+    badgeColor: "#FF4757",
+    badgeBg: "rgba(255,71,87,0.15)",
+    badgeBorder: "rgba(255,71,87,0.3)",
+    description: "Official 2023 AP English Literature FRQ Set 1 — Poetry Analysis + Prose Fiction Analysis + Literary Argument.",
+    totalTime: 120 * 60,
+
+    questions: [
+      // ── FRQ 1: Poetry Analysis — Alice Cary "Autumn" ──
+      {
+        num: 1,
+        type: "poetry-analysis",
+        title: "Poetry Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Alice Cary",
+        source: "\"Autumn\" (1874)",
+        context: "In Alice Cary\u2019s poem \u201cAutumn,\u201d published in 1874, the speaker contemplates the onset of autumn. Read the poem carefully.",
+        prompt: "In a well-written essay, analyze how Cary uses literary elements and techniques to convey the speaker\u2019s complex response to the changing seasons.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: "", text: "Autumn" },
+          { lineStart: "", text: "" },
+          { lineStart: 1, text: "Shorter and shorter now the twilight clips" },
+          { lineStart: 2, text: "    The days, as though the sunset gates they crowd," },
+          { lineStart: 3, text: "And Summer from her golden collar slips" },
+          { lineStart: 4, text: "    And strays through stubble-fields, and moans aloud," },
+          { lineStart: "", text: "" },
+          { lineStart: 5, text: "Save when by fits the warmer air deceives," },
+          { lineStart: 6, text: "    And, stealing hopeful to some sheltered bower,\u00B9" },
+          { lineStart: 7, text: "She lies on pillows of the yellow leaves," },
+          { lineStart: 8, text: "    And tries the old tunes over for an hour." },
+          { lineStart: "", text: "" },
+          { lineStart: 9, text: "The wind, whose tender whisper in the May" },
+          { lineStart: 10, text: "    Set all the young blooms listening through th\u2019 grove," },
+          { lineStart: 11, text: "Sits rustling in the faded boughs to-day" },
+          { lineStart: 12, text: "    And makes his cold and unsuccessful love." },
+          { lineStart: "", text: "" },
+          { lineStart: 13, text: "The rose has taken off her tire\u00B2 of red\u2014" },
+          { lineStart: 14, text: "    The mullein-stalk\u00B3 its yellow stars have lost," },
+          { lineStart: 15, text: "And the proud meadow-pink\u2074 hangs down her head" },
+          { lineStart: 16, text: "    Against earth\u2019s chilly bosom, witched with frost." },
+          { lineStart: "", text: "" },
+          { lineStart: 17, text: "The robin, that was busy all the June," },
+          { lineStart: 18, text: "    Before the sun had kissed the topmost bough," },
+          { lineStart: 19, text: "Catching our hearts up in his golden tune," },
+          { lineStart: 20, text: "    Has given place to the brown cricket now." },
+          { lineStart: "", text: "" },
+          { lineStart: 21, text: "The very cock crows lonesomely at morn\u2014" },
+          { lineStart: 22, text: "    Each flag\u2075 and fern the shrinking stream divides\u2014" },
+          { lineStart: 23, text: "Uneasy cattle low,\u2076 and lambs forlorn" },
+          { lineStart: 24, text: "    Creep to their strawy sheds with nettled sides." },
+          { lineStart: "", text: "" },
+          { lineStart: 25, text: "Shut up the door: who loves me must not look" },
+          { lineStart: 26, text: "    Upon the withered world, but haste to bring" },
+          { lineStart: 27, text: "His lighted candle, and his story-book," },
+          { lineStart: 28, text: "    And live with me the poetry of Spring." },
+        ],
+        footnotes: [
+          "1 a spot in a garden shaded by a covering of vines or branches",
+          "2 attire",
+          "3 stem of a woolly-leaved plant",
+          "4 slender plant with pink flowers",
+          "5 plant with long tapering leaves",
+          "6 moo",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the poem." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Poetry Analysis essay (FRQ 1).
+The student analyzed Alice Cary's "Autumn" (1874) — a poem in which the speaker contemplates the onset of autumn through personification of Summer, the wind, flowers, and animals, ending with a retreat indoors to live with "the poetry of Spring."
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of literary elements: personification (Summer straying and moaning, wind making "unsuccessful love"), imagery (yellow leaves, frost, faded boughs), tone (melancholy, nostalgia, acceptance), structure (movement from outdoors to indoors, from loss to consolation), diction, and how they convey the speaker's complex response — a blend of grief for summer's passing, awareness of nature's decline, and finding solace in imagination and memory.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 2: Prose Fiction Analysis — Shawl, Everfair ──
+      {
+        num: 2,
+        type: "prose-analysis",
+        title: "Prose Fiction Analysis",
+        points: 6,
+        suggestedTime: 40,
+        author: "Nisi Shawl",
+        source: "Everfair (2016)",
+        context: "The following excerpt is from Nisi Shawl\u2019s novel Everfair, published in 2016. In this passage, the narrator describes the experience of a young woman, Lisette, as she rides her bicycle through the French countryside in July 1889. Read the passage carefully.",
+        prompt: "In a well-written essay, analyze how Shawl uses literary elements and techniques to portray Lisette\u2019s complex response to her experience of riding her bicycle.\n\nIn your response you should do the following:\n\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.\n\u2022 Select and use evidence to support your line of reasoning.\n\u2022 Explain how the evidence supports your line of reasoning.\n\u2022 Use appropriate grammar and punctuation in communicating your argument.",
+        passage: [
+          { lineStart: 1, text: "    Lisette Toutournier sighed. She breathed in again," },
+          { lineStart: 2, text: "out, in, the marvelous air smelling of crushed stems," },
+          { lineStart: 3, text: "green blood bruised and roused by her progress along" },
+          { lineStart: 4, text: "this narrow forest path. Her progress, and that of her" },
+          { lineStart: 5, text: "new mechanical friend. Commencing to walk again," },
+          { lineStart: 6, text: "she pushed it along through underbrush and creepers," },
+          { lineStart: 7, text: "woodbine and fern giving way before its wheels. Oh," },
+          { lineStart: 8, text: "how the insects buzzed about her exposed skin, her" },
+          { lineStart: 9, text: "face and hands and wrists and ankles, waiting to bite." },
+          { lineStart: 10, text: "And the vexing heat bid fair to stifle her as she" },
+          { lineStart: 11, text: "climbed the hillside slowly\u2014but the" },
+          { lineStart: 12, text: "scent\u2014intoxicating! And soon, so soon, all this effort" },
+          { lineStart: 13, text: "would be repaid." },
+          { lineStart: 14, text: "    There! The crest came in sight, the washed-out" },
+          { lineStart: 15, text: "summer sky showing itself through the beech trees\u2019" },
+          { lineStart: 16, text: "old silver trunks. Now her path connected with the" },
+          { lineStart: 17, text: "road, stony, rutted, but still better suited for riding." },
+          { lineStart: 18, text: "She stood a moment admiring the view: the valley, the" },
+          { lineStart: 19, text: "blurred rows of cultivation curving away smaller and" },
+          { lineStart: 20, text: "smaller in the bluing distance, the sky pale overhead," },
+          { lineStart: 21, text: "the perfect foil for the dark-leaved woods behind her" },
+          { lineStart: 22, text: "and by her sides. Not far off a redwing sang, cold" },
+          { lineStart: 23, text: "water trickling uphill." },
+          { lineStart: 24, text: "    She had the way of it now: gripping the rubber" },
+          { lineStart: 25, text: "molded around the machine\u2019s metal handlebars, she" },
+          { lineStart: 26, text: "leaned it toward her and swung one skirted leg over" },
+          { lineStart: 27, text: "the drop frame. Upright again, she walked it a few" },
+          { lineStart: 28, text: "more steps forward, aiming straight along the lane, the" },
+          { lineStart: 29, text: "yellow-brown dust bright in the sun. The machine\u2019s" },
+          { lineStart: 30, text: "glossy paint shone. Within the wheel\u2019s front rim its" },
+          { lineStart: 31, text: "spokes were a revolving web of intricacy, shadows" },
+          { lineStart: 32, text: "and light chasing one another. Tiny puffs of dust" },
+          { lineStart: 33, text: "spurted from beneath the black rubber tires." },
+          { lineStart: 34, text: "    She raised her eyes. The vista opened wider, wider." },
+          { lineStart: 35, text: "The road laid itself down before her." },
+          { lineStart: 36, text: "    Up on the creaking leather seat. Legs drawn high," },
+          { lineStart: 37, text: "boots searching, scraping, finding their places . . . and" },
+          { lineStart: 38, text: "pedal! Push! Feet turning circles like her machine\u2019s" },
+          { lineStart: 39, text: "wheels, with those wheels. It was, at first, work. She" },
+          { lineStart: 40, text: "pedaled and steered, wobbling just once and catching" },
+          { lineStart: 41, text: "herself. Then going faster, faster! Flying! Freedom!" },
+          { lineStart: 42, text: "    Saplings, walls, and vines whipped by, flashes of" },
+          { lineStart: 43, text: "greenbrowngreengrey as Lisette on her machine sped" },
+          { lineStart: 44, text: "down the road, down the hill. Wind rushed into her" },
+          { lineStart: 45, text: "face, whistled in her ears, filled her nose, her lungs," },
+          { lineStart: 46, text: "tore her hair loose of its pins to stream behind her." },
+          { lineStart: 47, text: "She was a wild thing, laughing, jouncing over dry" },
+          { lineStart: 48, text: "watercourses, hanging on for dear, dear life. Lower," },
+          { lineStart: 49, text: "now, and some few trees arched above, alternately" },
+          { lineStart: 50, text: "blocking the hot glare and exposing her to it" },
+          { lineStart: 51, text: "coolwarmcoolwarm, currents of sun and shade" },
+          { lineStart: 52, text: "splashing over her as she careened by. Coasting, at" },
+          { lineStart: 53, text: "last, spilling all velocity till she and the machine came" },
+          { lineStart: 54, text: "to rest beside the river." },
+          { lineStart: 55, text: "    The river. The comforting smell and sound of it" },
+          { lineStart: 56, text: "rushing away. Out on the Yonne\u2019s broad darkness a" },
+          { lineStart: 57, text: "barge sailed, bound perhaps for Paris, the Seine, the" },
+          { lineStart: 58, text: "sea beyond,\u00B9 carrying casks of wine and other" },
+          { lineStart: 59, text: "valuables. Flushed from her ride, Lisette blushed yet" },
+          { lineStart: 60, text: "more deeply, suddenly conscious of the curious stares" },
+          { lineStart: 61, text: "of those around her: Mademoiselle Carduner, the" },
+          { lineStart: 62, text: "schoolmistress; and Monsieur Lutterayne, the" },
+          { lineStart: 63, text: "chemist,\u00B2 out for a promenade during his dinner hour" },
+          { lineStart: 64, text: "or on some errand, seizing a chance to vacate his" },
+          { lineStart: 65, text: "stuffy shop. Flustered, she attempted to restrain her" },
+          { lineStart: 66, text: "hair into a proper chignon,\u00B3 but at only sixteen and" },
+          { lineStart: 67, text: "with many pins missing, this was beyond her skill." },
+          { lineStart: 68, text: "She began furiously to plait\u2074 her thick blond curls," },
+          { lineStart: 69, text: "and the others moved away." },
+          { lineStart: 70, text: "    At last she was alone on the riverbank with her" },
+          { lineStart: 71, text: "mechanical friend. She tied her plaits together, though" },
+          { lineStart: 72, text: "she knew that momentarily they would slither apart." },
+          { lineStart: 73, text: "She stroked the machine\u2019s still-gleaming handlebars," },
+          { lineStart: 74, text: "then leaned to fit her forehead at their center, so." },
+          { lineStart: 75, text: "\u201cDear one,\u201d whispered Lisette. \u201cHow can you ever" },
+          { lineStart: 76, text: "know how much you mean to me? Who would not" },
+          { lineStart: 77, text: "give all they could, everything they had, in exchange" },
+          { lineStart: 78, text: "for such happiness as I have found with you?\u201d" },
+        ],
+        footnotes: [
+          "1 The Yonne River in France is a tributary of the Seine River, which passes through the city of Paris toward the Atlantic Ocean.",
+          "2 pharmacist",
+          "3 a hairstyle in which the hair is pinned into a knot at the nape of the neck or at the back of the head",
+          "4 braid",
+        ],
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the passage." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence, mentions literary elements with little explanation; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning, explains how literary elements contribute to meaning; 4 = specific evidence supporting all claims, consistently explains how multiple literary elements/techniques contribute to interpretation." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Prose Fiction Analysis essay (FRQ 2).
+The student analyzed an excerpt from Nisi Shawl's Everfair (2016) — a passage about Lisette, a sixteen-year-old woman riding her bicycle through the French countryside in 1889, experiencing exhilaration and freedom before becoming self-conscious when observed by townspeople, then expressing intimate affection for her "mechanical friend."
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+Look for analysis of narrative techniques: sensory imagery (smells, wind, light/shadow), pacing and syntax (fragments for speed — "Flying! Freedom!"), neologisms ("greenbrowngreengrey," "coolwarmcoolwarm"), characterization (Lisette's joy vs. social self-consciousness), personification of the bicycle, tone shifts (exhilaration to embarrassment to tenderness), and how they portray Lisette's complex response — physical liberation, sensory ecstasy, social constraint, and deep emotional bond with her machine as a vehicle of freedom.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+
+      // ── FRQ 3: Literary Argument — A Character's Reinvention ──
+      {
+        num: 3,
+        type: "literary-argument",
+        title: "Literary Argument",
+        points: 6,
+        suggestedTime: 40,
+        prompt: `In many works of literature, characters choose to reinvent themselves for significant reasons. They may wish to separate from a previous identity, gain access to a different community, disguise themselves from hostile forces, or express a more authentic sense of self.
+
+Either from your own reading or from the following list, choose a work of fiction in which a character intentionally creates a new identity. Then, in a well-written essay, analyze how the character\u2019s reinvention contributes to an interpretation of the work as a whole. Do not merely summarize the plot.
+
+In your response you should do the following:
+\u2022 Respond to the prompt with a thesis that presents a defensible interpretation.
+\u2022 Provide evidence to support your line of reasoning.
+\u2022 Explain how the evidence supports your line of reasoning.
+\u2022 Use appropriate grammar and punctuation in communicating your argument.
+
+Suggested works:
+The Autobiography of an Ex-Colored Man, The Awakening, Brooklyn, By the Way . . . Meet Vera Stark, Ceremony, The Color Purple, The Count of Monte Cristo, Disgrace, Fahrenheit 451, Fences, Great Expectations, A House for Mr. Biswas, The House of the Spirits, The Hummingbird\u2019s Daughter, Jane Eyre, Jasmine, The Joy Luck Club, Kindred, Kiss of the Spider Woman, The Known World, The Last of the Menu Girls, Lila, Little Fires Everywhere, Lucy, The Mayor of Casterbridge, Middlesex, The Miraculous Day of Amalia G\u00f3mez, The Nickel Boys, Orlando, Passing, The Poisonwood Bible, Sophie\u2019s Choice, The Strange Case of Dr. Jekyll and Mr. Hyde, Surfacing, The Taming of the Shrew, The Tenant of Wildfell Hall, Their Eyes Were Watching God, There There, Vanity Fair, Washington Black, Wuthering Heights`,
+        rubric: [
+          { row: "A", category: "Thesis", points: 1, description: "Responds to the prompt with a thesis that presents a defensible interpretation of the selected work." },
+          { row: "B", category: "Evidence and Commentary", points: 4, description: "0 = no evidence or incoherent; 1 = mostly general evidence; 2 = some specific evidence with broad generalizations; 3 = specific evidence supporting claims in a line of reasoning; 4 = specific evidence supporting all claims, consistently explains how details contribute to interpretation of the work as a whole." },
+          { row: "C", category: "Sophistication", points: 1, description: "Demonstrates sophistication of thought and/or develops a complex literary argument by identifying complexities/tensions, situating within broader context, accounting for alternative interpretations, or employing a vivid and persuasive style." },
+        ],
+        scoringPrompt: `You are an expert AP English Literature grader scoring a Literary Argument essay (FRQ 3).
+The student chose their own literary work to respond to a prompt about a character who intentionally creates a new identity — to separate from a previous identity, gain access to a different community, disguise themselves, or express a more authentic self — and how that reinvention contributes to an interpretation of the work as a whole.
+Evaluate using the AP Lit rubric: Thesis (0-1), Evidence & Commentary (0-4), Sophistication (0-1).
+The student must demonstrate genuine knowledge of their chosen work, not just plot summary. Look for a clear interpretive claim about how the character's reinvention contributes to the meaning of the work as a whole, supported by specific textual evidence with insightful commentary.
+Return ONLY valid JSON: {"score": <integer 0-6>, "feedback": "<3-5 sentence feedback>"}`
+      },
+    ],
+  },
 ];
 
 export default ALL_TESTS;
