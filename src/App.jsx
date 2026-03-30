@@ -99,7 +99,7 @@ function Timer({ totalSeconds }) {
       fontFamily:font,fontWeight:700,fontSize:"0.95rem",color:col,
       display:"flex",alignItems:"center",gap:6,
       animation:pct<0.25?"blink 1.2s ease infinite":"none"}}>
-      \u23F1 {m}:{s}
+      ⏱ {m}:{s}
     </div>
   );
 }
